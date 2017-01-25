@@ -1,3 +1,3 @@
 import Names from './names';
 
-console.log(Names, lolz)
+console.log(Names)
