@@ -1,41 +1,55 @@
 import immutable from 'immutable'
 
-const logPrefix = '\n********************\n[ImmutableJS] - feature - FromJS\n********************\n'
+const prefix = '\n********************\n[ImmutableJS] - feature - FromJS\n********************\n'
 
 const defaultItemsArr = ['JohnDoe', 'Joe Belfiery', 'Some random string', 'ducks are nice', 1, 3, null, 1.23, 3.14]
 
 const simpleFromJS = () => {
-    console.log('[simpleFromJS]\n')
-
     const map = immutable.fromJS({
         name: 'John Doe',
         age: '+9000',
     })
 
-    console.log('[[*]] map over elements and log them')
-    console.log(map.get('name'), map.get('age'))
+    logOperation('map over elements and log them')
+    logResult(map.get('name'), map.get('age'))
 }
 
 const createMapFromArrayAndIterateOver = () => {
-    console.log('[createMapFromArrayAndIterateOver]\n')
-
     const map = immutable.fromJS(defaultItemsArr)
 
-    console.log('[[*]] map.get el by key \'0\' (converted arr index of el)')
-    console.log(map.get('0'))
+    logOperation('map.get el by key \'0\' (converted arr index of el)')
+    logResult(map.get('0'))
 
-    console.log('[[*]] map over elements and log them')
-    map.forEach(item => console.log(item))
+    logOperation('map over elements and log them')
+    map.forEach(item => logResult(item))
+}
+
+const changeMapValueUsingSet = () => {
+
 }
 
 const displayFullFeatures = () => {
-    console.log(logPrefix)
+    log(prefix)
+    log('[ simpleFromJS() ]\n')
     simpleFromJS()
 
-    console.log('\n\n')
+    log('\n\n')
+    log('[ createMapFromArrayAndIterateOver() ]\n')
     createMapFromArrayAndIterateOver()
 
-    console.log('\n\n')
+    log('\n\n')
+}
+
+const log = (str) => {
+    console.log(str)
+}
+
+const logResult = (str) => {
+    log('\t\tResult: ' + str)
+}
+
+const logOperation = (str) => {
+    log('\t--> ' + str)
 }
 
 const feature = {
