@@ -25,7 +25,20 @@ const createMapFromArrayAndIterateOver = () => {
 }
 
 const changeMapValueUsingSet = () => {
+    const map = immutable.fromJS({
+        name: 'Unique data name',
+        type: 'somethingElse',
+        id: '9001',
+        role: 'unbeknownst',
+        available: false,
+    })
 
+    logOperation('display initial mapped object')
+    map.forEach(item => logResult(item))
+    logOperation('display modified mapped object')
+
+    const newMap = map.set('name', 'Not so unique name, lol')
+    newMap.forEach(item => logResult(item))
 }
 
 const displayFullFeatures = () => {
@@ -33,11 +46,13 @@ const displayFullFeatures = () => {
     log('[ simpleFromJS() ]\n')
     simpleFromJS()
 
-    log('\n\n')
+    logHeaderSpace()
     log('[ createMapFromArrayAndIterateOver() ]\n')
     createMapFromArrayAndIterateOver()
 
-    log('\n\n')
+    logHeaderSpace()
+    log('[ createMapFromArrayAndIterateOver() ]\n')
+    changeMapValueUsingSet()
 }
 
 const log = (str) => {
@@ -50,6 +65,10 @@ const logResult = (str) => {
 
 const logOperation = (str) => {
     log('\t--> ' + str)
+}
+
+const logHeaderSpace = () => {
+    log('\n\n')
 }
 
 const feature = {
