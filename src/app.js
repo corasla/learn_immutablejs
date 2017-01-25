@@ -1,3 +1,3 @@
-import Names from './names';
+import Names from './names'
 
-console.log(Names, 'so asda')
+console.log(Names)
