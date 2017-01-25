@@ -9,6 +9,7 @@ module.exports = {
         path: './bin',
         filename: 'app.bundle.js'
     },
+    debug: true,
     devtool: 'source-map',
     module: {
         loaders: [{

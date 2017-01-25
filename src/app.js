@@ -1,3 +1,3 @@
-import Names from './names'
+import FromJS from './features/from-js'
 
-console.log(Names)
+FromJS.displayFullFeatures()
