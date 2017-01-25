@@ -1,20 +1,23 @@
 const webpack = require('webpack');
-
+const path = require('path');
 module.exports = {
-     entry: './src/app.js',
-     output: {
-         path: './bin',
-         filename: 'app.bundle.js'
-     },
+    entry: [
+        'webpack/hot/dev-server',
+        path.resolve(__dirname, 'src/app.js'),
+    ],
+    output: {
+        path: './bin',
+        filename: 'app.bundle.js'
+    },
     devtool: 'source-map',
     module: {
-         loaders: [{
-             test: /\.js$/,
-             exclude: /node_modules/,
-             loader: 'babel-loader'
-         }]
-     },
-     plugins: [
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader'
+        }]
+    },
+    plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -22,6 +25,6 @@ module.exports = {
             output: {
                 comments: false,
             },
-        }),
+        })
     ],
  };
