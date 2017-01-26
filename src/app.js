@@ -1,3 +1,5 @@
 import FromJS from './features/from-js'
+import IsOp from './features/is'
 
-FromJS.displayFullFeatures()
+// FromJS.displayFullFeatures()
+IsOp.displayFullFeatures()

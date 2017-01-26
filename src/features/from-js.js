@@ -1,6 +1,8 @@
 import immutable from 'immutable'
+import { log, logResult, logOperation, logHeaderSpace } from '../utils/logger'
 
-const prefix = '\n********************\n[ImmutableJS] - feature - FromJS\n********************\n'
+let prefix = '\n********************\n[ImmutableJS] - feature - FromJS() \n********************\n'
+prefix += 'Deeply converts plain JS objects and arrays to Immutable Maps and Lists.\n\n'
 
 const defaultItemsArr = ['JohnDoe', 'Joe Belfiery', 'Some random string', 'ducks are nice', 1, 3, null, 1.23, 3.14]
 
@@ -107,21 +109,6 @@ const displayFullFeatures = () => {
     useReviverWhenCreatingFromJS()
 }
 
-const log = (str) => {
-    console.log(str)
-}
-
-const logResult = (str) => {
-    log('\t\tResult: ' + str)
-}
-
-const logOperation = (str) => {
-    log('\t--> ' + str)
-}
-
-const logHeaderSpace = () => {
-    log('\n\n')
-}
 
 const feature = {
     displayFullFeatures,
