@@ -35,10 +35,21 @@ const deleteInList = () => {
 }
 
 const updateInList = () => {
-    // let list = immutable.fromJS([1, 2, 3, 4, 5, [6, 7, 8, 9], {a:1, b:2}]).toList()
-    // logOperation('Going to update element in list using conditional updater function')
-    // console.log(list)
-    // list = list.updateIn([6, 'a'], 'nothing here')
+    let list = immutable.fromJS([1, 2, 3, 4, 5, [6, 7, 8, 9], {a:1, b:2}]).toList()
+    logOperation('Going to update element in list using conditional updater function which replaces 1 with 0')
+    list = list.updateIn([6, 'a'], 'nothing here', val => {
+        if (val === 1) return 0
+
+        return val
+    })
+    logList(list)
+    logOperation('Going to update element in list using def value and updater function on that')
+    list = list.updateIn([6, 'c'], 'nothing here', val => {
+        if (val === 1) return 0
+        if (val === 'nothing here') return 'indeed'
+        return val
+    })
+    logList(list)
 }
 
 const displayFullFeatures = () => {
