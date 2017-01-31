@@ -1,5 +1,5 @@
 import immutable from 'immutable'
-import { log, logResult, logOperation, logHeaderSpace } from '../utils/logger'
+import { log, logResult, logOperation, logHeaderSpace } from '../../utils/logger'
 
 let prefix = '\n\n\n\n********************\n[ImmutableJS] - feature - Is() \n********************\n'
 prefix += 'Value equality check with semantics similar to Object.is, but treats Immutable Iterables as values, equal if the second Iterable includes equivalent values.\n\n'

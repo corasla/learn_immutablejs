@@ -1,5 +1,5 @@
 import immutable from 'immutable'
-import { log, logResult, logOperation, logHeaderSpace } from '../utils/logger'
+import { log, logResult, logOperation, logHeaderSpace } from '../../utils/logger'
 
 let prefix = '\n********************\n[ImmutableJS] - feature - FromJS() \n********************\n'
 prefix += 'Deeply converts plain JS objects and arrays to Immutable Maps and Lists.\n\n'
