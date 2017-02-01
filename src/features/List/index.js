@@ -4,6 +4,7 @@ import transientChanges from './examples/transientChanges'
 import validations from './examples/validations'
 import readingValues from './examples/readingValues'
 import conversion from './examples/conversion'
+import iterators from './examples/iterators'
 
 export default {
     deepPersistentChanges,
@@ -11,5 +12,6 @@ export default {
     transientChanges,
     validations,
     readingValues,
-    conversion
+    conversion,
+    iterators
 }

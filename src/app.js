@@ -12,4 +12,5 @@ import List from './features/list/index'
 // List.transientChanges.displayFullFeatures()
 // List.validations.displayFullFeatures()
 // List.readingValues.displayFullFeatures()
-List.conversion.displayFullFeatures()
+// List.conversion.displayFullFeatures()
+List.iterators.displayFullFeatures()
