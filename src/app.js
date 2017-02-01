@@ -11,5 +11,5 @@ import List from './features/list/index'
 // List.deepPersistentChanges.displayFullFeatures()
 // List.transientChanges.displayFullFeatures()
 // List.validations.displayFullFeatures()
-List.readingValues.displayFullFeatures()
-// List.conversion.displayFullFeatures()
+// List.readingValues.displayFullFeatures()
+List.conversion.displayFullFeatures()

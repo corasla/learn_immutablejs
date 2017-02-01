@@ -1,5 +1,5 @@
 import immutable, { List } from 'immutable'
-import { log, logResult, logOperation, logHeaderSpace } from '../../utils/logger'
+import { log, logResult, logOperation, logHeaderSpace } from '../../../utils/logger'
 
 let prefix = '\n\n\n\n********************\n[ImmutableJS] - feature - List - Validations \n********************\n'
 prefix += 'Lists are ordered indexed dense collections, much like a JavaScript Array.\n\n'
