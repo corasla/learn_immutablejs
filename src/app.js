@@ -14,4 +14,5 @@ import List from './features/list/index'
 // List.readingValues.displayFullFeatures()
 // List.conversion.displayFullFeatures()
 // List.iterators.displayFullFeatures()
-List.sequence.displayFullFeatures()
+// List.sequence.displayFullFeatures()
+List.subsets.displayFullFeatures()

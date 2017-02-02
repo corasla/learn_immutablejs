@@ -6,6 +6,7 @@ import validations from './examples/validations'
 import conversion from './examples/conversion'
 import iterators from './examples/iterators'
 import sequence from './examples/sequence'
+import subsets from './examples/subsets'
 
 export default {
     deepPersistentChanges,
@@ -15,5 +16,6 @@ export default {
     validations,
     conversion,
     iterators,
-    sequence
+    sequence,
+    subsets,
 }
