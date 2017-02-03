@@ -17,4 +17,5 @@ import List from './features/list/index'
 // List.sequence.displayFullFeatures()
 // List.subsets.displayFullFeatures()
 // List.combination.displayFullFeatures()
-List.reducing.displayFullFeatures()
+// List.reducing.displayFullFeatures()
+List.search.displayFullFeatures()

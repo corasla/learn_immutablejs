@@ -9,6 +9,7 @@ import iterators from './examples/iterators'
 import reducing from './examples/reducing'
 import sequence from './examples/sequence'
 import subsets from './examples/subsets'
+import search from './examples/search'
 
 export default {
     deepPersistentChanges,
@@ -22,4 +23,5 @@ export default {
     reducing,
     sequence,
     subsets,
+    search,
 }
